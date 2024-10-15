@@ -1,0 +1,9 @@
+#!/bin/bash
+
+read -p "Entrez un le nom du script: " nameScript
+read -p "Entrez le chemin du dossier: " pathName
+
+echo "#!/bin/bash" > $pathName/$nameScript
+chmod +x $pathName/$nameScript
+
+vim $pathName/$nameScript
