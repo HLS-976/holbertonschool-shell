@@ -1,11 +1,13 @@
 #!/bin/bash
-read -p "Entrez un message de commit: " message
 
-if [ -z $message ]; then
-	echo "Veuillez renseigner un message de commit"
+read -p "Entrez un un fichier à stage: " addMessage
+read -p "Entrez un message de commit: " commitMessage
+
+if [ -z "$commitMessage" ]; then
+	echo "Veuillez renseigner un message pour le commit !"
 	exit 1
-fi 
+fi
 
-git add .
+git add "$addMessage"
 git status
-git commit -m "$message"
+git commit -m "$commitMessage"
