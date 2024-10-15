@@ -1,0 +1,12 @@
+#!/bin/bash
+read -p "Entrez un message de commit: " message
+
+if [ -z $message ]; then
+	echo "Veuillez renseigner un message de commit"
+	exit 1
+fi 
+
+git add .
+
+git commit -m "$message"
+
