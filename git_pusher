@@ -7,7 +7,5 @@ if [ -z $message ]; then
 fi 
 
 git add .
-
-git commit -m "$message"
-
 git status
+git commit -m "$message"
