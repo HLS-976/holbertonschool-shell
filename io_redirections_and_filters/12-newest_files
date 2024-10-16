@@ -1,2 +1,2 @@
 #!/bin/bash
-ls --file-type -t1
+find . -type f | ls -t1
